@@ -64,17 +64,11 @@
 - Layout
 - Pages
 
-## Bootstrap 4
+## Bootstrap 4 Grid system
 
-載入的 Bootstrap 4
-
-### Grid system
-
+載入的 Bootstrap 4 Grid system 含以下：
 - breakpoints
 - bootstrap-grid
-
-### Utilities
-
 - sizing
 - spacing
 - visibility
