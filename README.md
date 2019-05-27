@@ -19,9 +19,9 @@
 - `l-` Layout
 - `m-` Modules
 - `e-` Element，最小元件，不可堪入其他 Block
-- `is-`/`has` States
+- `is-`/`has-` States
 - `js` JavaScript hooks
-- 其餘為 Bootstrap 的 Grid System 與 Utilities
+
 
 ### 基本規則
 
