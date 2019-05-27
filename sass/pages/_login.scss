@@ -29,13 +29,4 @@
       height: 100%;
     }
   }
-
-  &__e-btn {
-    border: pxTorem(1px) solid $light;
-    height: pxTorem(56px);
-    padding: pxTorem(16px);
-    background-color: white;
-    //   @include media-breakpoint-up(xl) {
-    // }
-  }
 }

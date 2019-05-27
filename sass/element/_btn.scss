@@ -30,4 +30,11 @@ $btn-base-height: pxTorem(65px);
   &_p-checkout-success {
     width: pxTorem(300px);
   }
+
+  &_p-login {
+    border: pxTorem(1px) solid $light;
+    height: pxTorem(56px);
+    padding: pxTorem(16px);
+    background-color: white;
+  }
 }
