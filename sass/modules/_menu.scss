@@ -1,0 +1,34 @@
+//
+// Menu
+//
+
+.m-menu {
+  font-size: $fz-l;
+  font-weight: $fw-medium;
+
+  &__title {
+    @include content-center;
+    padding: pxTorem(16px) 0;
+    background-color: $primary;
+    color: white;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    border: 1px solid $light;
+    padding: pxTorem(8px);
+
+    @include link-hover {
+      background-color: $light;
+      color: $primary;
+    }
+
+    &.is-disabled {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+}

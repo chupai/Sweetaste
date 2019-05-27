@@ -1,0 +1,38 @@
+extends partial/_layout.pug
+block content
+
+  section.p-login.mb-xl-6
+    .container.px-0.px-xl-4
+      .row.no-gutters.flex-md-row-reverse.justify-content-center
+        .col-12.d-xl-none
+          .h-bg-primary
+              h2.h-text-white.py-3.h-t1.h-text-center 會員登入
+        .col-12.col-xl-5.h-bg-light.my-xl-1
+          .p-login__community
+            h3.p-login__title.d-none.d-xl-inline-block
+              | 連結社群帳號
+            a.e-btn.p-login__e-btn
+              img.e-image(width='108', src='img/icon/facebook.svg', alt='')
+            a.e-btn.p-login__e-btn 
+              img.e-image(width='94', src='img/icon/google.svg', alt='')
+            a.e-btn.p-login__e-btn 
+              img.e-image(width='97', src='img/icon/yahoo.svg', alt='')
+        .col-12.col-xl-5
+          form.m-form(action='')
+            .h-bg-primary.py-3.d-none.d-xl-block
+              h2.h-text-white.h-t1.h-text-center 會員登入
+            .m-form__content.pt-3.pt-xl-0.pb-2
+              .e-form-square.mb-1
+                i.e-form-square__icon.material-icons
+                  | person
+                input#email.e-form-square__input(type='text', name='email', placeholder='電子信箱/手機號碼')
+              .e-form-square
+                i.e-form-square__icon.material-icons
+                  | vpn_key
+                input#password.e-form-square__input(type='password', name='password', placeholder='請輸入使用者密碼')
+              .m-form__checkbox.mt-s1
+                input#rember-password(type='checkbox', name='remberme')
+                label(for='rember-password')
+                | 記住我
+            button.e-btn.e-btn_success 登入帳號
+            

@@ -1,0 +1,120 @@
+extends partial/_layout.pug
+block content
+
+  //- hero
+  section.m-hero
+    .container.px-0.px-xl-4
+      .m-hero__bg(style="background-image: url('img/hero/home.jpg')")
+      .m-hero__menu
+        .row.no-gutters.px-0.px-md-8
+          .col-4
+            a.m-hero__link(href='#')
+              .m-hero__link-bg(style="background-image: url('img/hero/choice.jpg')")
+              | 本日精選
+          .col-4
+            a.m-hero__link(href='#')
+              .m-hero__link-bg(style="background-image: url('img/hero/recommend.jpg')")
+              | 人氣推薦        
+          .col-4
+            a.m-hero__link.h-bd-none(href='#')
+              .m-hero__link-bg(style="background-image: url('img/hero/new.jpg')")
+              | 新品上市
+  //- hero end
+
+  //- story
+  section.p-story.my-xl-8
+    .h-bg-light.mb-xl-10
+      .container.px-xl-4
+        .row
+          .col-12.py-3.d-xl-none.h-bg-white
+            h2.e-title.h-fz-t3
+              | 為什麼―― 
+              span 選擇了做甜點？
+          .col-12.col-xl-6.h-break-block-xl
+            .p-story__img.h-col-md-nm(style="background-image: url('img/index/dessert.jpg')", alt='')
+          .col-12.col-xl-6.d-flex.justify-content-end
+            .p-story__text.py-3.py-xl-7.px-2.px-xl-0
+              p
+                | 青山依舊在，幾度夕陽紅。慣看秋月春風一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+              p
+                | 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，都付笑談中。
+            h2.e-title.e-title_vrl.pl-7.d-none.d-xl-block
+              | 為什麼―― 
+              span 選擇了做甜點？
+    .h-bg-light.mb-xl-10
+      .container.px-xl-4
+        .row
+          .col-12.py-3.d-xl-none.h-bg-white
+            h2.e-title.h-fz-t3
+              | 為什麼―― 
+              span 一定要吃甜點？
+          .col-12.col-xl-6.h-break-block-xl.order-xl-2
+            .p-story__img.h-col-md-nm(style="background-image: url('img/index/eat-dessert.jpg')", alt='')
+          .col-12.col-xl-6.d-flex.justify-content-end
+            .p-story__text.py-3.py-xl-7.px-2.px-xl-0
+              p
+                | 青山依舊在，幾度夕陽紅。慣看秋月春風一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+              p
+                | 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，都付笑談中。
+            h2.e-title.e-title_vrl.pl-7.d-none.d-xl-block.pr-2
+              | 為什麼―― 
+              span 一定要吃甜點？
+    .container
+      .d-flex.justify-content-center
+        h2.e-title.h-fz-t3.py-3.d-xl-none
+          | 想吃甜點―― 
+          span 是不需要理由的。
+        h2.e-title.e-title_vrl.d-none.d-xl-block
+          | 想吃甜點―― 
+          span 是不需要理由的。
+  //- story end
+  //- products
+  section.mb-xl-3
+    .container.px-xl-4
+      .row.px-2.px-xl-0
+        .col-12.col-md-4.mb-3
+          .m-card
+            .m-card__label 本日精選
+            .e-favorite
+              input#heart1(type='checkbox')
+              label(for='heart1')
+                i.e-favorite__like.material-icons
+                  | favorite
+                i.e-favorite__unlike.material-icons
+                  | favorite_border
+            .m-card__img(style="background-image: url('img/product/product1.jpg')")      
+            .m-card__body
+              h4.m-card__title.flex-grow-1 甜甜甜圈圈圈
+              p.m-card__pric.flex-grow-1 NT$ 20
+            a.e-btn(href='') 加入購物車
+        .col-12.col-md-4.mb-3
+          .m-card
+            .m-card__label 本日精選
+            .e-favorite
+              input#heart2(type='checkbox')
+              label(for='heart2')
+                i.e-favorite__like.material-icons
+                  | favorite
+                i.e-favorite__unlike.material-icons
+                  | favorite_border
+            .m-card__img(style="background-image: url('img/product/product2.jpg')")      
+            .m-card__body
+              h4.m-card__title.flex-grow-1 切過的蛋糕
+              p.m-card__pric.flex-grow-1 NT$ 450
+            a.e-btn(href='') 加入購物車
+        .col-12.col-md-4.mb-3
+          .m-card
+            .m-card__label 本日精選
+            .e-favorite
+              input#heart3(type='checkbox')
+              label(for='heart3')
+                i.e-favorite__like.material-icons
+                  | favorite
+                i.e-favorite__unlike.material-icons
+                  | favorite_border
+            .m-card__img(style="background-image: url('img/product/product3.jpg')")      
+            .m-card__body
+              h4.m-card__title.flex-grow-1 藍莓優格
+              p.m-card__pric.flex-grow-1 NT$ 99
+            a.e-btn(href='') 加入購物車
+  //- products end

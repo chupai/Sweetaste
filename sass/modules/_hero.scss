@@ -1,0 +1,110 @@
+//
+// Hero
+//
+
+// variables
+$hero-height-tablets: pxTorem(496px);
+$hero-height-moblile: pxTorem(277px);
+$hero__link-height-tablets: pxTorem(256px);
+$hero__link-height-moblile: pxTorem(180px);
+
+// hero
+.m-hero {
+  position: relative;
+
+  // 背景
+  &__bg {
+    position: relative;
+    z-index: index($zIndexs, 'm-hero__bg');
+    @include bg-cover;
+    height: $hero-height-moblile;
+    @include media-breakpoint-up(md) {
+      height: $hero-height-tablets;
+    }
+    // checkout-success.html 樣式
+    &_p-checkout-success {
+      height: pxTorem(518px);
+      @include media-breakpoint-up(xl) {
+        height: pxTorem(460px);
+      }
+    }
+  }
+  // 背景 end
+
+  // 選單
+  &__menu {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      margin-top: pxTorem(-80px);
+    }
+  }
+  // 選單 end
+
+  // 連結
+  &__link {
+    @include content-center;
+    position: relative;
+    transition: 0.5s;
+    border-right: 1px solid white;
+    z-index: index($zIndexs, 'm-hero__link');
+    width: 100%;
+    height: $hero__link-height-moblile;
+    overflow: hidden;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.25em;
+    color: white;
+    font-size: $fz-l;
+
+    @include media-breakpoint-up(md) {
+      height: $hero__link-height-tablets;
+    }
+
+    // 連結背景色
+    &::before {
+      content: '';
+      @include posa-full(0);
+      transition: inherit;
+      z-index: -1;
+      background-color: rgba($primary, 0.8);
+    }
+
+    // 連結背景圖
+    &-bg {
+      @include posa-full(pxTorem(5px)); // 同 blur()
+      transition: inherit;
+      z-index: -2;
+      background-color: white;
+      @include bg-cover;
+      filter: blur(pxTorem(5px));
+    }
+
+    // hover
+    @include link-hover {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      &::before {
+        background-color: rgba($success, 0.8);
+      }
+    }
+    @include link-hover('-bg') {
+      @include posa-full(0);
+      filter: blur(0);
+    }
+
+    // hover end
+  }
+  // 連結 end
+
+  // e-title 元件
+  &__e-title {
+    position: absolute;
+    top: pxTorem(30px);
+    right: pxTorem(30px);
+
+    @include media-breakpoint-up(md) {
+      top: pxTorem(60px);
+      right: pxTorem(40px);
+    }
+  }
+  // e-title 元件 end
+}

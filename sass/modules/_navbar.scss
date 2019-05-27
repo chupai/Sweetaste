@@ -1,0 +1,183 @@
+//
+// Navbar
+//
+
+// variables
+$navbar-height-tablets: pxTorem(100px);
+$navbar-height-moblile: pxTorem(84px);
+$navbar__link-height: pxTorem(40px);
+$navbar__link-padding: 0 pxTorem(30px);
+
+.m-navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: $navbar-height-moblile;
+
+  @include media-breakpoint-up(xl) {
+    height: $navbar-height-tablets;
+  }
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properties so that content nested within behave properly.
+  > .container,
+  > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // list
+  &__list {
+    display: flex;
+    @include media-breakpoint-down(md) {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      transition: 0.3s cubic-bezier(1, 0.5, 0, 1);
+      opacity: 0;
+      z-index: index($zIndexs, 'm-navbar');
+      background-color: rgba(black, 0.6);
+      width: 80%;
+    }
+    &.is-activ {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  &__list &__link {
+    @include media-breakpoint-down(md) {
+      color: white;
+      @include link-hover {
+        background-color: white;
+        color: $primary;
+      }
+    }
+  }
+
+  // list end
+
+  // link
+  &__link {
+    @include content-center;
+    transition: 0.5s ease-in-out;
+    color: $primary;
+    padding: $navbar__link-padding;
+    height: $navbar__link-height;
+    font-weight: $fw-medium;
+    @include link-hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
+  // link end
+
+  // button
+  &__button {
+    position: relative;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+    padding: $navbar__link-padding;
+    height: $navbar__link-height;
+    cursor: pointer;
+
+    $toggle-w: pxTorem(22px);
+    $toggle-h: pxTorem(2px);
+    $toggle-h-half: $toggle-h / 2;
+    &-open,
+    &-close {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transition: 0.2s ease-in-out;
+      transform: translate(-50%, -50%);
+      border-radius: $toggle-h-half;
+      width: $toggle-w;
+      height: $toggle-h;
+    }
+
+    &-open {
+      display: block;
+      background-color: $primary;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        transition: 0.2s ease-in-out;
+        border-radius: $toggle-h-half;
+        background-color: $primary;
+        width: 100%;
+        height: 100%;
+      }
+      &::before {
+        bottom: -200%;
+      }
+      &::after {
+        bottom: 200%;
+      }
+    }
+
+    &-close {
+      display: none;
+      opacity: 0;
+      background-color: transparent;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        transition: 0.2s ease-in-out;
+        border-radius: $toggle-h-half;
+        background-color: $primary;
+        width: 100%;
+        height: 100%;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      background-color: $primary;
+    }
+    &:hover &-open,
+    &:hover &-open::before,
+    &:hover &-open::after,
+    &:hover &-close::before,
+    &:hover &-close::after {
+      background-color: white;
+    }
+
+    &.is-active &-open {
+      display: none;
+      opacity: 0;
+    }
+    &.is-active &-close {
+      display: block;
+      opacity: 1;
+    }
+  }
+  // button end
+
+  // 狀態
+  &.is-fix-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: index($zIndexs, 'm-navbar_fixed');
+    box-shadow: pxTorem(2px) pxTorem(2px) pxTorem(4px) pxTorem(-2px)
+      rgba(black, 0.2);
+    padding: pxTorem(5px) 0;
+    height: auto;
+  }
+  // 狀態 end
+}

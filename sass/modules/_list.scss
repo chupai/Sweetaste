@@ -1,0 +1,48 @@
+//
+// List
+//
+
+.m-list {
+  position: relative;
+  color: $secondary;
+
+  // 標題
+  &__title {
+    background-color: $light;
+    padding: pxTorem(16px) 0;
+    text-align: center;
+    font-weight: $fw-medium;
+    background-color: $light;
+    // carts.html 樣式
+    &_p-carts {
+      @include media-breakpoint-up(xl) {
+        background-color: transparent;
+        border-bottom: 1px solid $light;
+      }
+    }
+  }
+
+  // 文字
+  &__text {
+    > p {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5em;
+    }
+  }
+
+  // 總共
+  &__total {
+    font-size: $fz-m;
+    font-weight: $fw-medium;
+  }
+
+  // carts.html 樣式
+  &_p-carts {
+    color: $primary;
+    @include media-breakpoint-up(xl) {
+      background-color: $primary;
+      color: $light;
+    }
+  }
+}

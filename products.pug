@@ -1,0 +1,154 @@
+extends partial/_layout.pug
+block content
+
+  //- hero
+  section.m-hero
+    .container.px-0.px-xl-4
+      .m-hero__bg(style="background-image: url('img/hero/product.jpg')")
+        h3.e-title.e-title_vrl.m-hero__e-title.h-fz-t2-md
+          | 想吃甜點―― 
+          span 是不需要理由的。
+  //- hero end
+
+  //- main
+  section.mt-xl-6.mb-3.mb-xl-6
+    .container.px-xl-4
+      .row
+        //- 選單
+        .col-xl-4.mb-3.mb-xl-0
+          nav.m-menu.h-col-md-nm
+            h3.m-menu__title
+              | 甜點類別
+            ul.m-menu__list
+              li
+                a.m-menu__link.is-active(href='#')
+                  | 所有甜品
+                  span （48）
+              li
+                a.m-menu__link(href='#')
+                  | 本日精選
+                  span （10）
+              li
+                a.m-menu__link(href='#')
+                  | 人氣推薦
+                  span （26）
+              li
+                a.m-menu__link(href='#')
+                  | 新品上市
+                  span （8）
+              li
+                a.m-menu__link.is-disabled(href='#')
+                  | 下架商品
+                  span （4）
+        //- 選單 end
+        //- 商品欄
+        .col-xl-8
+          .row.px-2.px-xl-0
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart1(type='checkbox')
+                  label(for='heart1')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product1.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 甜甜甜圈圈圈
+                  p.m-card__pric.flex-grow-1 NT$ 20
+                a.e-btn(href='') 加入購物車
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart2(type='checkbox')
+                  label(for='heart2')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product2.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 就是草莓蛋糕
+                  p.m-card__pric.flex-grow-1 NT$ 666
+                a.e-btn(href='') 加入購物車
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart3(type='checkbox')
+                  label(for='heart3')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product3.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 藍莓百香果優格
+                  p.m-card__pric.flex-grow-1 NT$ 2000
+                a.e-btn(href='') 加入購物車
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart4(type='checkbox')
+                  label(for='heart4')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product4.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 奇異果藍莓優格
+                  p.m-card__pric.flex-grow-1 NT$ 222
+                a.e-btn(href='') 加入購物車
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart5(type='checkbox')
+                  label(for='heart5')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product5.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 口土司
+                  p.m-card__pric.flex-grow-1 NT$ 50
+                a.e-btn(href='') 加入購物車
+            .col-12.col-md-6.mb-3.mb-xl-2
+              .m-card
+                .m-card__label 本日精選
+                .e-favorite
+                  input#heart6(type='checkbox')
+                  label(for='heart6')
+                    i.e-favorite__like.material-icons
+                      | favorite
+                    i.e-favorite__unlike.material-icons
+                      | favorite_border
+                .m-card__img(style="background-image: url('img/product/product6.jpg')")      
+                .m-card__body
+                  h4.m-card__title.flex-grow-1 草草莓冰冰
+                  p.m-card__pric.flex-grow-1 NT$ 9999
+                a.e-btn(href='') 加入購物車
+
+
+        //- 商品欄 end
+
+      //- 頁面
+      .d-flex.justify-content-center.justify-content-xl-end
+        .e-pages
+          a.e-pages__page(href='#')
+            i.material-icons
+              | arrow_left
+          a.e-pages__page.is-active(href='#') 1
+          a.e-pages__page(href='#') 2
+          a.e-pages__page(href='#') 3
+          a.e-pages__page(href='#')
+            i.material-icons
+              | arrow_right
+      //- 頁面 end
+  //- main end

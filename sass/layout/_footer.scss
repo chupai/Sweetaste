@@ -1,0 +1,40 @@
+//
+// Footer
+//
+
+.l-footer {
+  a {
+    @include link-hover {
+      color: darken($primary, 10%);
+    }
+  }
+
+  // 聯絡
+  &__connection {
+    list-style: none;
+    font-weight: $fw-regular;
+  }
+
+  // 版權
+  &__corporation {
+    width: 100%;
+    font-family: $TimesNewRoman;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+  }
+
+  // icons
+  &__icons {
+    display: flex;
+    > a {
+      display: block;
+      transition: 0.5s;
+      margin-right: pxTorem(8px);
+      @include link-hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+extends partial/_layout.pug
+block content
+  section.mb-xl-6
+    .container.px-xl-4
+      .row.justify-content-center
+        //- main
+        .col-12.col-xl-6
+          form.m-form.h-col-md-nm(action='')
+            .m-form__header.p-3
+              .row.no-gutters
+                .col-6 
+                  h3.h-fz-t1 運送
+                .col-6
+                  ul.e-progressbar.h-100
+                    li.e-progressbar__step.is-active
+                      i.material-icons
+                        | done
+                    li.e-progressbar__step
+                      i.material-icons
+                        | done
+                    li.e-progressbar__step
+                      i.material-icons
+                        | done
+            .m-form__content.mb-3
+              .row.h-gutter-s1
+                .col-6.mb-1
+                  label.m-form__label.mb-s1 姓氏
+                  input.m-form__control(type='text', name='lastname', placeholder='王')
+                .col-6.mb-1
+                  label.m-form__label.mb-s1 名字
+                  input.m-form__control(type='text', name='firstname', placeholder='小王')
+                .col-12.mb-1
+                  label.m-form__label.mb-s1 電話
+                  input.m-form__control(type='phone', name='phone', placeholder='0912345678')
+                .col-12
+                  label.m-form__label.mb-s1 地址
+                .col-6
+                  select.m-form__control(name='city')
+                    option(value='高雄市') 高雄市
+                    option(value='台南市') 台南市
+                    option(value='台中市') 台中市
+                    option(value='台北市') 台北市
+                .col-6
+                  select.m-form__control(name='region')
+                    option(value='新興區') 新興區
+                    option(value='鼓山區') 鼓山區
+                    option(value='左營區') 左營區
+                .col-12.mt-s1
+                  input.m-form__control(type='text', name='address', placeholder='幸福路 520 號')
+            a.e-btn.e-btn_success(href="checkout-2.html") 下一步
+
+        //- main end
+
+        //- sub
+        .col-xl-4.d-none.d-xl-block
+          .m-list.h-bd-solid-1.mb-2
+            h3.m-list__title 訂單摘要
+            .m-list__text.p-1
+              p
+                | 小計
+                span NT$ 2316
+              p
+                | 運費
+                span NT$ 100
+              p.m-list__total
+                | 總計
+                span NT$ 2416
+
+          .m-list.h-bd-solid-1
+            h3.m-list__title 購物清單
+            ul.m-cart.pt-1.px-1
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product8.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 草莓牛奶湯
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 150
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product2.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 就草莓蛋糕
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 666
+
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product7.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 好像鬆餅
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 1500

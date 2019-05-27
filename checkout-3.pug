@@ -1,0 +1,109 @@
+extends partial/_layout.pug
+block content
+  section.mb-xl-6
+    .container.px-xl-4
+      .row.justify-content-center
+        //- main
+        .col-12.col-xl-6
+          form.m-form.h-col-md-nm(action='')
+            .m-form__header.p-3
+              .row.no-gutters
+                .col-6 
+                  h3.h-fz-t1 發票
+                .col-6
+                  ul.e-progressbar.h-100
+                    li.e-progressbar__step.is-finish
+                      i.material-icons
+                        | done
+                    li.e-progressbar__step.is-finish
+                      i.material-icons
+                        | done
+                    li.e-progressbar__step.is-active
+                      i.material-icons
+                        | done
+            .m-form__content.mb-3
+              .row.h-gutter-s1
+                .col-12.mb-1
+                  .m-form__radios
+                    input#electronic-invoice(type='radio', name='invoice', value='electronic-invoice', checked='')
+                    label.mform__radio(for='electronic-invoice') 電子發票
+                    input#paper-invoice(type='radio', name='invoice', value='paper-invoice')
+                    label.mform__radio(for='paper-invoice') 郵寄發票
+                .col-12#electronic-invoice-email.mb-1
+                  label.m-form__label(for='invoice-email') 電子郵件信箱
+                  input#invoice-email.m-form__control(type='email', name='invoice-email', placeholder='example@email.com')
+                #paper-invoice-address.row.h-gutter-s1.mb-1
+                  .col-6
+                    label.m-form__label.mb-s1(for='invoice-address') 地址
+                  .col-6.d-flex.align-items-center.justify-content-end
+                    .m-form__checkbox
+                      input#same-address(type='checkbox', name='same-address')
+                      label(for='same-address')
+                      |同運送地址
+                  .col-6
+                    select.m-form__control(name='invoice-city')
+                      option(value='高雄市') 高雄市
+                      option(value='台南市') 台南市
+                      option(value='台中市') 台中市
+                      option(value='台北市') 台北市
+                  .col-6
+                    select.m-form__control(name='invoice-region')
+                      option(value='新興區') 新興區
+                      option(value='鼓山區') 鼓山區
+                      option(value='左營區') 左營區
+                  .col-12.mt-s1
+                    input.m-form__control(type='text', name='invoice-address', placeholder='幸福路 520 號')
+                .col-12
+                  label.m-form__label.mb-s1 統一編號（選填）
+                  input.m-form__control(type='text', name='vat-numbere', placeholder='12345678')
+            a.e-btn.e-btn_success(href="checkout-success.html") 下一步
+        //- main end
+
+        //- sub
+        .col-xl-4.d-none.d-xl-block
+          .m-list.h-bd-solid-1.mb-2
+            h3.m-list__title 訂單摘要
+            .m-list__text.p-1
+              p
+                | 小計
+                span NT$ 2316
+              p
+                | 運費
+                span NT$ 100
+              p.m-list__total
+                | 總計
+                span NT$ 2416
+
+          .m-list.h-bd-solid-1
+            h3.m-list__title 購物清單
+            ul.m-cart.pt-1.px-1
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product8.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 草莓牛奶湯
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 150
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product2.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 就草莓蛋糕
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 666
+
+              li.m-cart__item.mb-1
+                .row
+                  .col-6
+                    .m-cart__image.m-cart__image_size_sm(style="background-image: url('img/product/product7.jpg')")
+                  .col-6
+                    .m-cart__text.h-100
+                      p 好像鬆餅
+                        span.pl-s1 (1)
+                      p.m-cart__price NT$ 1500
+
+

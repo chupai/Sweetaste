@@ -1,0 +1,41 @@
+.p-login {
+  &__title {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: $secondary;
+    font-weight: $fw-light;
+    &::before,
+    &::after {
+      content: '——';
+      position: absolute;
+      top: 0;
+    }
+    &::before {
+      right: 100%;
+    }
+    &::after {
+      left: 100%;
+    }
+  }
+
+  &__community {
+    display: flex;
+    padding: $spacer-3;
+    @include media-breakpoint-up(xl) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__e-btn {
+    border: pxTorem(1px) solid $light;
+    height: pxTorem(56px);
+    padding: pxTorem(16px);
+    background-color: white;
+    //   @include media-breakpoint-up(xl) {
+    // }
+  }
+}

@@ -1,0 +1,44 @@
+//
+// Index
+//
+
+// variables
+$story-height-tablets: pxTorem(420px);
+$story__img-min-height: pxTorem(250px);
+
+// story
+.p-story {
+  // 文字
+  &__text {
+    color: $secondary;
+    > p {
+      margin-bottom: 1em;
+      line-height: 2;
+      letter-spacing: 0;
+    }
+    p + p {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: $story-height-tablets;
+      text-align: left;
+      writing-mode: vertical-rl;
+      > p {
+        margin-left: 2em;
+        line-height: 2.5;
+      }
+      p + p {
+        margin-left: 0;
+      }
+    }
+  }
+  // 文字 end
+
+  // 圖
+  &__img {
+    @include bg-cover;
+    height: 100%;
+    min-height: $story__img-min-height;
+  }
+}

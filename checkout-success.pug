@@ -1,0 +1,24 @@
+extends partial/_layout.pug
+block content
+  section.mb-xl-6
+    .container.px-0.px-xl-4
+      .m-hero
+        .m-hero__bg(style="background-image: url('img/hero/success.jpg')")
+          .p-checkout-success__content
+            .d-blok
+              ul.e-progressbar.e-progressbar_primary.mb-2
+                li.e-progressbar__step.is-finish
+                  i.material-icons
+                    | done
+                li.e-progressbar__step.is-finish
+                  i.material-icons
+                    | done
+                li.e-progressbar__step.is-finish
+                  i.material-icons
+                    | done
+              h2.p-checkout-success__title.h-text-center
+                | 付款成功
+            a.e-btn.e-btn_success.e-btn_p-checkout-success.mt-5.d-none.d-xl-flex(href='products.html')
+              | 繼續逛逛
+      a.e-btn.e-btn_success.d-xl-none(href='products.html')
+        | 繼續逛逛
