@@ -3,7 +3,7 @@
 ## 位置
 
 - 網頁：https://chupai.github.io/Sweetaste/
-- Github：https://github.com/chupai/Sweetaste/blob/master
+- Github：https://github.com/chupai/Sweetaste/tree/master
 - 設計稿：https://xd.adobe.com/spec/934efdb7-a7e4-47d5-572e-efece0914f62-e57f/
 
 ## CSS 排序
