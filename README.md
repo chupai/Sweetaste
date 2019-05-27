@@ -30,19 +30,19 @@
 ### 元素的子元素
 
 `Block__Element` 的子元素以 `Block__Element-element` 表示。
-
+例如：
 ```css
 .m-list__link {
   /* ... */
 }
-}
+
 .m-list__link-bg {
   /* ... */
 }
 ```
 
 ### 頁面或模塊的特殊樣式，以 `_Modifier` 去修改樣式。
-
+例如：
 ```
 .m-list_p-index {}
 .e-list_m-index {}
