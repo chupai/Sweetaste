@@ -7,34 +7,24 @@ $(document).ready(function() {
   })
   // 導覽列按鈕 end
 
-  // 固定導覽列
-  const $setFixed = $('.js-m-navbar')
-  let menuTop = $setFixed.offset().top
-
-  $(window).on('load scroll resize', function() {
-    if ($(window).scrollTop() > menuTop) {
-      $setFixed.addClass('is-fix-top')
-    } else {
-      $setFixed.removeClass('is-fix-top')
-    }
-  })
-  // 固定導覽列 end
-
-  // 至頂按鈕
+  // 固定導覽列與至頂按鈕
   const $backtopBtn = $('.js-e-backtop-btn')
+  const $setFixed = $('.js-m-navbar')
   $backtopBtn.hide()
   $backtopBtn.on('click', function() {
     $('html,body').animate({ scrollTop: 0 }, 'slow')
     return false
   })
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 600) {
+    if ($(this).scrollTop() > 500) {
+      $setFixed.addClass('is-fix-top')
       $backtopBtn.show()
     } else {
+      $setFixed.removeClass('is-fix-top')
       $backtopBtn.hide()
     }
   })
-  // 至頂按鈕 end
+  // 固定導覽列與至頂按鈕 end
 
   // invoice radios
   $('#paper-invoice-address').hide()
