@@ -78,7 +78,6 @@
 - sizing
 - spacing
 - visibility
-- visibility
 
 ## 其他
 
