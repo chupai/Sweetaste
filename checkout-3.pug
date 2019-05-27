@@ -29,15 +29,15 @@ block content
                     label.mform__radio(for='electronic-invoice') 電子發票
                     input#paper-invoice(type='radio', name='invoice', value='paper-invoice')
                     label.mform__radio(for='paper-invoice') 郵寄發票
-                .col-12#electronic-invoice-email.mb-1
+                #electronic-invoice-email.col-12.mb-1
                   label.m-form__label.mb-s1(for='invoice-email') 電子郵件信箱
-                  input#invoice-email.m-form__control(type='email', name='invoice-email', placeholder='example@email.com')
+                  input.m-form__control(type='email', name='invoice-email', placeholder='example@email.com')
                 #paper-invoice-address.row.h-gutter-s1.mb-1
                   .col-6
-                    label.m-form__label.mb-s1(for='invoice-address') 地址
+                    label.m-form__label.mb-s1 地址
                   .col-6.d-flex.align-items-center.justify-content-end
                     .m-form__checkbox
-                      input#same-address(type='checkbox', name='same-address')
+                      input(type='checkbox', name='same-address')
                       label(for='same-address')
                       |同運送地址
                   .col-6
