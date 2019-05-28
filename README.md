@@ -45,7 +45,7 @@
 例如：
 ```
 .m-list_p-index {}
-.e-list_m-index {}
+.e-btn_m-menu {}
 ```
 
 ## Sass 結構
