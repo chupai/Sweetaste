@@ -5978,13 +5978,12 @@ input[type='checkbox']:checked + label .e-favorite__unlike {
 }
 
 .p-story__text > p {
-  margin-bottom: 1em;
   line-height: 2;
   letter-spacing: 0;
 }
 
 .p-story__text p + p {
-  margin-bottom: 0;
+  margin-top: 1em;
 }
 
 @media (min-width: 1024px) {
@@ -5996,11 +5995,11 @@ input[type='checkbox']:checked + label .e-favorite__unlike {
             writing-mode: vertical-rl;
   }
   .p-story__text > p {
-    margin-left: 2em;
     line-height: 2.5;
   }
   .p-story__text p + p {
-    margin-left: 0;
+    margin-top: 0;
+    margin-right: 2em;
   }
 }
 
